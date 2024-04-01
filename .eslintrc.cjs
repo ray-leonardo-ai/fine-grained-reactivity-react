@@ -4,7 +4,7 @@ const config = {
 	parserOptions: {
 		project: true,
 	},
-	plugins: ["@typescript-eslint"],
+	plugins: ["@typescript-eslint", "unused-imports"],
 	extends: [
 		"plugin:@typescript-eslint/recommended-type-checked",
 		"plugin:@typescript-eslint/stylistic-type-checked",
@@ -27,6 +27,7 @@ const config = {
 				checksVoidReturn: { attributes: false },
 			},
 		],
+		"unused-imports/no-unused-imports": "warn",
 	},
 };
 

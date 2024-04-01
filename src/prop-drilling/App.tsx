@@ -12,7 +12,7 @@ export function App() {
 	 */
 	const [backlog] = useState(tickets)
 	const [selectedTicket, setSelectedTicket] = useState<Ticket | null>(null)
-	const [myWork] = useState<Ticket[]>(backlog.filter((ticket) => ticket.assignee === 'Alice'))
+	const [myWork] = useState<Ticket[]>(backlog.filter((ticket) => ticket.assigneeId === 'Alice'))
 
 	return (
 		<>

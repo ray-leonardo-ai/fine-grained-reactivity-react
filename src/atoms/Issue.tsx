@@ -1,12 +1,10 @@
-import { type Ticket } from '../data/tickets.ts'
+import { useAtom } from 'jotai/index'
 import useRenderCount from '../hooks/useRenderCount.ts'
+import { selectedTicketAtom } from './tickets-atom.ts'
 
-type Props = {
-	ticket: Ticket | null
-}
-
-export default function Issue({ ticket }: Props) {
+export default function Issue() {
 	const renderCount = useRenderCount()
+	const [ticket] = useAtom(selectedTicketAtom)
 
 	if (!ticket)
 		return (

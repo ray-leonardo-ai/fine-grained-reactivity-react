@@ -1,31 +1,31 @@
 export type Ticket = {
-	id: number
+	id: string
 	title: string
 	description: string
 	status: 'open' | 'in progress' | 'done'
-	assignee: string
+	assigneeId: number
 }
 
 export const tickets: Ticket[] = [
 	{
-		id: 1,
-		title: 'Create a new ticket',
-		description: 'Create a new ticket in the database',
+		id: 'LEO-0001',
+		title: 'Create DB table',
+		description: 'Create a new table in the database',
 		status: 'open',
-		assignee: 'Alice',
+		assigneeId: 1,
 	},
 	{
-		id: 2,
+		id: 'LEO-0002',
 		title: 'Update a ticket',
 		description: 'Update a ticket in the database',
 		status: 'in progress',
-		assignee: 'Bob',
+		assigneeId: 2,
 	},
 	{
-		id: 3,
+		id: 'LEO-0003',
 		title: 'Delete a ticket',
 		description: 'Delete a ticket in the database',
 		status: 'done',
-		assignee: 'Charlie',
+		assigneeId: 3,
 	},
 ]
