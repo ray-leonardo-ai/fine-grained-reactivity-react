@@ -25,13 +25,12 @@ a:hover {
 body {
 	margin: 0;
 	display: flex;
-	place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
 }
 
 h1 {
-	font-size: 3.2em;
+	font-size: 2rem;
 	line-height: 1.1;
 }
 
@@ -67,11 +66,37 @@ button:focus-visible {
 	}
 }
 
+@keyframes flash {
+	0%, 100% { opacity: 1; background-color: red }
+	50% { opacity: 0; }
+}
+
+section {
+	padding: 2rem;
+	border: 1px solid #333;
+	min-width: 200px;
+}
+
+.flash-animation {
+	animation: flash 0.5s;
+}
+
 .app {
 	display: flex;
+	flex: 1;
 }
 
 .ticket-fields {
 	display: flex;
 	flex-direction: column;
+}
+
+.ticket-summary {
+	padding: 1rem;
+	border: 1px solid #333;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
 }
